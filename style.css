@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(9, 232, 172);
+}
+
+#panel {
+    overflow: hidden;
+    height: 80%;
+    width: 80%;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+#ptop {
+    padding: 0 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    background-color: rgba(4, 173, 100, 0.741);
+}
+
+.elem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.elem h2 {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.elem p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    color: rgba(4, 173, 100, 0.741);
+    background-color: aliceblue;
+    height: 30px;
+    width: 2rem;
+    border-radius: 5px;
+}
+
+.workArea {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 100px);
+    background-color: aliceblue;
+}
+
+#bubble {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: x-large;
+    background-color: rgba(78, 251, 176, 0.741);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#bubble:hover {
+    background-color: rgba(4, 173, 100, 0.741);
+}
+
+#gameOver {
+    font-size: 36px;
+    font-weight: bolder;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    width: 50%;
+    animation: bounce 0.5s infinite;
+}
+
+#win {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 50%;
+    background-color: rgba(255, 223, 0, 0.8);
+    border: 3px solid #FFD700;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    animation: bounce 0.5s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+#win:hover {
+    background-color: rgba(255, 223, 0, 1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+#win:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #FFD700;
+}
